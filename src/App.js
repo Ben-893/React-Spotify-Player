@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Playlist from './Playlists/Playlist';
+
 // Replace with your app's client ID, redirect URI and desired scopes
-const clientId = '';
+const clientId = process.env.REACT_APP_CLIENT_ID;
 const redirectUri = 'http://localhost:3000';
 const scopes = ['user-read-currently-playing', 'user-read-playback-state'];
 
@@ -33,7 +35,7 @@ const App = () => {
         <img src={logo} className='App-logo' alt='logo' />
         {
           token &&
-            'Logged in' /* here goes the code/components that a user sees when they are logged in */
+            <Playlist /> /* here goes the code/components that a user sees when they are logged in */
         }
       </header>
     </div>
