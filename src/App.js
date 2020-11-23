@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -34,8 +34,9 @@ const App = () => {
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         {
-          token &&
-            <Playlist /> /* here goes the code/components that a user sees when they are logged in */
+          token && (
+            <Playlist token={token} />
+          ) /* here goes the code/components that a user sees when they are logged in */
         }
       </header>
     </div>
