@@ -1,6 +1,6 @@
 # React Spotify Player
 
-This is a single-page React App that allows a user to interact with the Spotify Api, and display a list of Playlists, and Songs
+This is a single-page React App that allows a user to interact with the Spotify Api, and display a list of Playlists, and Songs 📀
 
 ### To Install
 
@@ -13,7 +13,7 @@ git clone https://github.com/Ben-893/React-Spotify-Player && cd React-Spotify-Pl
 npm install
 ```
 
-- create a .env file in the root folder of the project, and set: REACT_APP_CLIENT_ID=ClientID (ClientID stands in for the unique ID code you were given in step 3)
+- Create a .env file in the root folder of the project, and set: REACT_APP_CLIENT_ID=ClientID (ClientID stands in for the unique ID code you were given in step 3)
 
 ### To Use
 
