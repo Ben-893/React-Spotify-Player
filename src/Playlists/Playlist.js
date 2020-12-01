@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import Tracks from './Tracks/Tracks';
 
 const Playlist = props => {
   const [playlists, setPlaylists] = useState();
@@ -22,6 +23,7 @@ const Playlist = props => {
           return (
             <div key={index}>
               <p>{playlist.name}</p>
+              <Tracks token={props.token}/>
               <img src={playlist.images[0].url} />
             </div>
           );
