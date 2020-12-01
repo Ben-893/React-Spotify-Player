@@ -21,14 +21,14 @@ const Tracks = props => {
       {tracks &&
         tracks.map((track, index) => {
           return (
-            <div key={index}>
-              <p className='trackNames'>
-                {track.track.name} - {track.track.album.name}
-              </p>
+            <div className='tracks' key={index}>
               <img
                 className='trackImages'
                 src={track.track.album.images[0].url}
               />
+              <span>
+                {track.track.name} - {track.track.album.name}
+              </span>
             </div>
           );
         })}

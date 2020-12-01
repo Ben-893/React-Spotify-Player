@@ -1,8 +1,11 @@
-.trackNames {
-  position: relative;
+.tracks {
+  display: flex;
+  align-items: center;
+  margin: 30px
 }
 
 .trackImages {
-  max-width: 50%;
-  top: 80px;
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
 }

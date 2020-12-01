@@ -1,0 +1,9 @@
+.playlists {
+  display: flex;
+}
+
+
+.playlistImage {
+  height: 400px;
+  width: 400px;
+}
