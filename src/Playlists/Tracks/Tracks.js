@@ -8,12 +8,9 @@ const Tracks = props => {
   const [tracks, setTracks] = useState();
   useEffect(() => {
     axios
-      .get(
-        'https://api.spotify.com/v1/playlists/45NhVz2qoz8Uxb3P8fMMoH/tracks',
-        {
-          headers: { Authorization: `Bearer ${props.token}` },
-        }
-      )
+      .get(`https://api.spotify.com/v1/playlists/${props.playlistId}/tracks`, {
+        headers: { Authorization: `Bearer ${props.token}` },
+      })
       .then(res => {
         setTracks(res.data.items);
       });
@@ -43,4 +40,5 @@ export default Tracks;
 
 Tracks.propTypes = {
   token: PropTypes.string,
+  playlistId: PropTypes.string,
 };

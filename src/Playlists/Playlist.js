@@ -25,7 +25,7 @@ const Playlist = props => {
             <div key={index}>
               <p>{playlist.name}</p>
               <img src={playlist.images[0].url} />
-              <Tracks token={props.token} />
+              <Tracks token={props.token} playlistId={playlist.id} />
             </div>
           );
         })}
