@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import './Tracks.css';
 
 const Tracks = props => {
   const [tracks, setTracks] = useState();
@@ -16,15 +17,21 @@ const Tracks = props => {
       .then(res => {
         setTracks(res.data.items);
       });
-    console.log(tracks);
   }, []);
+  console.log(tracks);
   return (
     <div>
       {tracks &&
         tracks.map((track, index) => {
           return (
             <div key={index}>
-              <p>{track[index].track.album.name}</p>
+              <p className='trackNames'>
+                {track.track.name} - {track.track.album.name}
+              </p>
+              <img
+                className='trackImages'
+                src={track.track.album.images[0].url}
+              />
             </div>
           );
         })}

@@ -20,11 +20,12 @@ const Playlist = props => {
     <div>
       {playlists &&
         playlists.map((playlist, index) => {
+          console.log(playlists);
           return (
             <div key={index}>
               <p>{playlist.name}</p>
-              <Tracks token={props.token}/>
               <img src={playlist.images[0].url} />
+              <Tracks token={props.token} />
             </div>
           );
         })}
